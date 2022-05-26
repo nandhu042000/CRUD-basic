@@ -1,0 +1,8 @@
+<b>Books</b>
+<div class="book-panels" style="flex-wrap:wrap">
+  <app-book
+    *ngFor="let book of booksy"
+    class="mb-2"
+    [books]="book"
+  ></app-book>
+</div>
