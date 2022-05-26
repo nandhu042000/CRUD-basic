@@ -12,8 +12,24 @@ export class AppComponent {
   constructor(private bookService: BookService) {}
 
   ngOnInit() {
+    this.getData();
+  }
+
+  getData(){
     this.bookService.getBooks().subscribe((books) => {
-      this.booksy = books;
+      this.booksy = books ;
     });
+  }
+
+  onDelete(book: any){
+    this.bookService.deleteBook(book.id).subscribe((res)=>{
+      this.getData();
+    })
+  }
+  
+  onAdd(book: any){
+    this.bookService.addBook(book.id).subscribe((res)=>{
+      this.getData();
+    })
   }
 }

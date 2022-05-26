@@ -1,11 +1,11 @@
 <div class="card bg-dark text-light m-1">
   <div class="card-body">
-  <img src="{{books.image}}">
-  Title:{{books.title}}<br>Genre:{{books.genre}}<br>Qty:{{books.qty}}
+  <img src="{{book.image}}">
+  Title:{{book.title}}<br>Genre:{{book.genre}}<br>Qty:{{book.qty}}
   <div id="buttons">
-    <button class="btn btn-success" (click)="onAdd(books.id)">
+    <button class="btn btn-success" (click)="onAddClicked(book)">
       Add</button>
-    <button class="btn btn-danger" (click)="onDelete(books.id)">
+    <button class="btn btn-danger" (click)="onDeleteClicked(book)">
       Delete</button>
   </div>
   </div>

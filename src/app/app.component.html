@@ -1,8 +1,10 @@
 <b>Books</b>
 <div class="book-panels" style="flex-wrap:wrap">
   <app-book
-    *ngFor="let book of booksy"
+    *ngFor="let instance of booksy"
     class="mb-2"
-    [books]="book"
+    (delete)="onDelete($event)"
+    (add)="onAdd($event)"
+    [book]="instance"
   ></app-book>
 </div>
